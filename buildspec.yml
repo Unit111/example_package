@@ -3,14 +3,15 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      python: 3.8
+      python: 3.12
     commands:
       - curl -sSL https://install.python-poetry.org | python3 -
       - pip install awscli
   build:
     commands:
-      - poetry build
-  post_build:
-    commands:
-      - aws codeartifact login --tool twine --domain $DOMAIN --domain-owner $DOMAIN_OWNER --repository $REPO
-      - twine upload --repository codeartifact dist/*
+      - echo "Hello"
+#      - poetry build
+#  post_build:
+#    commands:
+#      - aws codeartifact login --tool twine --domain $DOMAIN --domain-owner $DOMAIN_OWNER --repository $REPO
+#      - twine upload --repository codeartifact dist/*
