@@ -9,9 +9,8 @@ phases:
       - pip install awscli
   build:
     commands:
-      - echo "Hello"
-#      - poetry build
-#  post_build:
-#    commands:
-#      - aws codeartifact login --tool twine --domain $DOMAIN --domain-owner $DOMAIN_OWNER --repository $REPO
-#      - twine upload --repository codeartifact dist/*
+      - poetry build
+  post_build:
+    commands:
+      - aws codeartifact login --tool twine --domain $DOMAIN --domain-owner $DOMAIN_OWNER --repository $REPO
+      - twine upload --repository codeartifact dist/*
