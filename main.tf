@@ -22,11 +22,11 @@ resource "aws_codebuild_project" "example" {
     buildspec       = "buildspec.yml"
   }
 
-  logs_config {
-    cloudwatch_logs {
-      status = "DISABLED"
-    }
-  }
+#   logs_config {
+#     cloudwatch_logs {
+#       status = "DISABLED"
+#     }
+#   }
 }
 
 resource "aws_codebuild_webhook" "example" {
