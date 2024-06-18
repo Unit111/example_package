@@ -21,12 +21,6 @@ resource "aws_codebuild_project" "example" {
     git_clone_depth = 1
     buildspec       = "buildspec.yml"
   }
-
-#   logs_config {
-#     cloudwatch_logs {
-#       status = "DISABLED"
-#     }
-#   }
 }
 
 resource "aws_codebuild_webhook" "example" {
