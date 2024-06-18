@@ -5,7 +5,7 @@ phases:
     runtime-versions:
       python: 3.12
     commands:
-      - pip install awscli poetry
+      - pip install poetry
   build:
     commands:
       - poetry build
