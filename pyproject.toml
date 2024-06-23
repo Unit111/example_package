@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "example-package"
-version = "0.1.1"
+version = "0.1.21"
 description = ""
 authors = ["Unit111 <unit_1@abv.bg>"]
 readme = "README.md"
